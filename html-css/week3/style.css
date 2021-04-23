@@ -1,0 +1,239 @@
+*{
+    font-family: sans-serif;
+    line-height: 4vh;
+    padding:0 10px 10px 10px;
+    
+}
+.logo{
+    width: 8%;
+    height: 4%;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav-bar ul{
+    display: flex;
+    list-style-type: none;
+    
+}
+.nav-bar li{
+    display: flex;
+    padding: 10px;
+    font-size: medium;
+    text-decoration: lightblue;
+}
+.heading p{
+    width: 60%;
+}
+.progress{
+    position: relative;
+    display: block;
+    width: 70em;
+    height: 10px;
+    border:1px solid black;
+    margin-bottom: 3%;
+    margin-left: 20px;
+}
+.progress span{
+    margin-left: -10px;
+    display: block;
+    height: 100%;
+    background-color:lightblue;  
+}
+.bar1 span{
+    width: 25%;
+    animation: bar1 4s;
+}
+.bar2 span{
+    width: 50%;
+    animation: bar2 4s;
+}
+.bar3 span{
+    width: 75%;
+    animation: bar3 4s;
+}
+@keyframes bar1 {
+    0%{
+        width:0;
+    }
+    100%{
+        width: 25%;
+    }
+}
+@keyframes bar2 {
+    0%{
+        width:25%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+@keyframes bar3 {
+    0%{
+        width:50%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+
+.info-flex1{
+    display: flex;
+    font-size: large;   
+    padding: 10px 10px 10px 200px;
+}
+.info-flex1 input{
+    width: 20em;
+}
+
+.info-flex2{
+    display: flex;
+    font-size: large;
+    padding: 20px 0 20px 220px;
+}
+.info-flex2 select{
+    font-size: medium;
+    text-align:center;
+    width: 15em;
+    padding:10px;
+    margin-left: 10px; 
+}
+.info-flex3{
+    display: flex;
+    font-size: large;
+    padding: 10px 0 10px 170px;
+}
+.info-flex3 input{
+    width: 20em;
+}
+.info-flex4{
+    display: flex;
+    flex-direction: row;
+    padding: 40px 0 30px 100px;
+}
+.info-flex4 label{
+    font-size: large;
+    margin-left: 1em;
+}
+.info-flex4 aside{
+    margin-top: 5em;
+    margin-left: -12.5em;
+    font-style: italic;
+    line-height: 3vh;
+    font-size: small; 
+    width: 16%;
+}
+.info-flex4 textarea{
+    width: 40em;
+    height: 10em;
+    
+}
+.custinfo label{
+    font-weight: bold;
+    margin-top:15px;
+}
+.info-flex5{
+    display: flex;
+    font-size: large;
+    padding: 20px 0 20px 220px;
+}
+.info-flex5 input{
+    width: 25em;
+}
+.info-flex6{
+    display: flex;
+    font-size: large;
+    padding: 20px 0 20px 185px;
+}
+.info-flex6 input{
+    width: 25em;
+}
+.info-flex7{
+    display: flex;
+    font-size: large;
+    padding: 10px 0 10px 105px;
+}
+.info-flex7 input{
+    width: 25em;
+}
+.contactinfo label{
+    font-weight: bold;
+    margin-top:15px;
+}
+.news{
+  padding-left: 70px;  
+}
+.news label{
+    font-size: large;
+    font-weight: bold;
+}
+.info-flex8{
+    display: flex;
+    font-size: large;
+    font-weight: bold;
+    padding: 10px 0 10px 220px;
+}
+.info-flex9{
+    display: flex;
+    font-size: large;
+    font-weight: bold;
+    padding:10px 0 10px 185px;
+}
+.info-flex10{
+    display: flex;
+    font-size: large;
+    font-weight: bold;
+    padding: 10px 0 10px 205px;
+}
+.items input.large{
+    width: 50px;
+    height:50px;
+}
+.items label{
+    margin-top:15px;
+}
+button{
+    float: right;
+    width: 12em;
+    height: 5em;
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+img{
+    width:15em;
+    height: 15em;
+}
+.images label{
+    font-weight: bold;
+    margin-top:15px;
+    
+}
+.images input.large{
+    width:50px;
+    height:50px;
+}
+.info-flex11{
+    display: flex;
+    width: 100%;
+    padding: 10px 30px 10px 20px;
+}
+.info-flex12{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 10px 100px 20px;
+
+}
+.info-flex13{
+    display: flex;
+    width: 100%;
+    padding: 10px 30px 10px 20px;
+}
+.info-flex14{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 10px 10px 20px;
+}
