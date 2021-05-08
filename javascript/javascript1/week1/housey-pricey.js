@@ -1,26 +1,30 @@
 //Housey-Pricey
-let volumeInMeters;
-let gardenSizeInM2;
-let additionalCost;
-let originalCost;
-let housePrice = (volumeInMeters * 2.5 * 1000) + (gardenSizeInM2 * 300);
+let volumeInMeters, gardenSizeInM2, additionalCost, originalCost, housePrice;
+
 //Peter housePrice
-{
-    let volumeInMeters = 8 * 10 * 10;
-    let gardenSizeInM2 = 100;
-    let originalCost = 2500000;
-    let housePrice = (volumeInMeters * 2.5 * 1000) + (gardenSizeInM2 * 300);
-    let additionalCost = originalCost - housePrice;
-    console.log(originalCost < housePrice);
-    console.log('Peter will be paying an additional cost of ' + additionalCost + ' on the house');
-}
+
+    volumeInMeters = 8 * 10 * 10;
+    gardenSizeInM2 = 100;
+    originalCost = 2500000;
+    housePrice = (volumeInMeters * 2.5 * 1000) + (gardenSizeInM2 * 300);
+    additionalCost = originalCost - housePrice;
+    if(originalCost < housePrice){
+        console.log(`Peter is paying a lesser amount of ${additionalCost} on the house`);
+    }else{
+        console.log(`Peter will be paying an additional cost of ${additionalCost} on the house`);
+    }
+    
+
 //Julia
-{
-    let volumeInMeters = 5 * 11 * 8;
-    let gardenSizeInM2 = 70;
-    let originalCost = 1000000;
-    let housePrice = (volumeInMeters * 2.5 * 1000) + (gardenSizeInM2 * 300);
-    let additionalCost = housePrice - originalCost;
-    console.log(originalCost < housePrice);
-    console.log('Julia will be paying lesser cost of ' + additionalCost + ' than the estimated price on the house');
-}
+
+    volumeInMeters = 5 * 11 * 8;
+    gardenSizeInM2 = 70;
+    originalCost = 1000000;
+    housePrice = (volumeInMeters * 2.5 * 1000) + (gardenSizeInM2 * 300);
+    additionalCost = housePrice - originalCost;
+    if(originalCost < housePrice){
+        console.log(`Julia will be paying lesser amount of ${additionalCost} than the estimated price on the house`);
+    }else{
+        console.log(`Julia is paying an additional cost of ${additionalCost} on the house`);
+    }
+    

@@ -12,8 +12,8 @@
 console.log('I love pizza');
 const favPizza = 'Pepperoni';
 let pizzaPrice = 100;
-console.log('New Pizza Order: ' + favPizza);
-console.log('The Price of the Pizza is: ' + pizzaPrice);
+console.log(`New Pizza Order: ${favPizza}`);
+console.log(`The Price of the Pizza is: ${pizzaPrice}`);
 
 /*Pizza-Exercise - 2:
 Now we will modify the program so that you can order multiple pizzas and also decide if the pizzas should be family size.
@@ -26,15 +26,14 @@ Now we will modify the program so that you can order multiple pizzas and also de
 */
 
 let numberOfPizzas = 3;
-var totalPrice = pizzaPrice * numberOfPizzas;
-{
+let totalPrice = pizzaPrice * numberOfPizzas;
 let familyPizza = false;
-console.log('New pizza order: ' + numberOfPizzas + ' ' + 'family size:' + familyPizza + ' ' + favPizza);
-console.log('Total cost for the order is: ' + totalPrice);
+if (familyPizza == false){
+console.log(`New pizza order: ${numberOfPizzas} family size: ${familyPizza} ${favPizza}`);
+console.log(`Total cost for the order is: ${totalPrice}`);
 }
-{
-let familyPizza = true;
-var totalPrice = totalPrice * 2;
-console.log('New pizza order: ' + numberOfPizzas + ' ' + 'family size:' + familyPizza + ' ' + favPizza);
-console.log('Total cost for the order is: ' + totalPrice);
+else{
+    totalPrice = totalPrice*2;
+console.log(`New pizza order: ${numberOfPizzas} family size: ${familyPizza} ${favPizza}`);
+console.log(`Total cost for the order is: ${totalPrice}`);
 }
