@@ -11,7 +11,7 @@ function getFullName(firstName, surName, useFormalName, gender = 'm')
             initial = 'Lady ';
         }
         let fullName = firstName + ' ' + surName;
-        if (useFormalName === true)
+        if (useFormalName)
         {
             return initial + fullName;
         }
