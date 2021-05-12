@@ -2,14 +2,22 @@ function getFullName(firstName, surName, useFormalName, gender = 'm')
 {   
     if(firstName && surName)
     {
-        let initial = (gender === 'm') ? 'Lord ':'Lady ';
+        let initial;
+        if (gender === 'm') 
+        {
+            initial = 'Lord ';
+        } else if (gender === 'f')
+        {
+            initial = 'Lady ';
+        }
         let fullName = firstName + ' ' + surName;
-        return (useFormalName === true)? initial + fullName : fullName;
+        if (useFormalName === true)
+        {
+            return initial + fullName;
+        }
+        return fullName;
     }
-    else 
-    {
-        return 'Please provide full name';
-    }
+    return 'Please Provide a Full Name';
 }
 const fullName1 = getFullName('Benjamin', 'Hughes', true);
 const fullName2 = getFullName('Benjamin', 'Hughes', false);
