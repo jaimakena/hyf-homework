@@ -3,7 +3,7 @@
 const notes = [];
 
 function saveNote(content, id){
-   return notes.push({content: content, id: id});
+   return notes.push({content, id});
 }
 
 saveNote('Pick up groceries', 1);
@@ -13,14 +13,15 @@ saveNote('Clean', 3);
 console.log(notes);
 
 function getNote(id){
+  if(!id || isNaN(id)){
+    return `Provide a proper value`;
+  }
   for (let i = 0; i < notes.length; i++){
     if(notes[i].id === id){
       return notes[i];
     }
+  
   }
-    if(!id){
-      console.log('Provide a proper value')
-    }
 }
 
 const firstNote = getNote(1);

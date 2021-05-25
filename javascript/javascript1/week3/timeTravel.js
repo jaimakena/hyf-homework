@@ -1,16 +1,16 @@
 //When will we be there??
 
 const travelInformation = {
-    speed: 50,
-    destinationDistance: 432,
-  };
-  
-  function getTravelTime(travelInformation){
-    
-    return Math.trunc(travelInformation.destinationDistance * 60/travelInformation.speed);
-  }
+  speed: 50,
+  destinationDistance: 432,
+};
 
-  const travelTime = getTravelTime(travelInformation);
+function getTravelTime(travelInformation){
+  
+  const travelTime = Math.trunc(travelInformation.destinationDistance * 60/travelInformation.speed);
   const timeInHours = Math.floor(travelTime/60);
   const timeInMinutes = travelTime % 60;
-  console.log(`Travel time: ${timeInHours} hours and ${timeInMinutes} minutes`);
+  return `Travel time: ${timeInHours} hours and ${timeInMinutes} minutes`;
+}
+
+console.log(getTravelTime(travelInformation));

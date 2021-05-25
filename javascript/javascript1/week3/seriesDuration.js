@@ -26,10 +26,10 @@ function logOutSeriesText(seriesDurations){
     let totalTime = 0;
     for(let i = 0; i < seriesDurations.length; i++)
     {
-    let daysSeries = seriesDurations[i].days + seriesDurations[i].hours/24 + seriesDurations[i].minutes/1440;
-    let percentOfSeries = daysSeries/daysOfAvgLife * 100; 
+    const daysSeries = seriesDurations[i].days + seriesDurations[i].hours/24 + seriesDurations[i].minutes/1440;
+    const percentOfSeries = daysSeries/daysOfAvgLife * 100; 
     console.log(`${seriesDurations[i].title} took ${percentOfSeries.toFixed(2)}% of my life.`);
-    totalTime = totalTime + percentOfSeries;
+    totalTime += percentOfSeries;
     }
     return `\n In total that is ${totalTime.toFixed(2)}% of my life.`;
 }

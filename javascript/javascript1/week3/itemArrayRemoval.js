@@ -13,8 +13,8 @@ const names = [
   const nameToRemove = "Ahmad";
   //To remove an item using indexOf and position if we do not know the index:
 
-  let position = names.indexOf(nameToRemove);
-  let removeditem = names.splice(position, 1);
+  const position = names.indexOf(nameToRemove);
+  const removeditem = names.splice(position, 1);
   
   console.log(removeditem);
 
