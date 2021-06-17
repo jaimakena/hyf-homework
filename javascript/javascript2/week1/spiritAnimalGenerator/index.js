@@ -17,10 +17,8 @@ if(inputName !== ''){
 function mouseOver(){
     const inputName = document.getElementById('name').value;
     if(inputName !== ''){
-        spiritName.innerHTML = getSpiritName(inputName);
-    }else{
-        spiritName.innerHTML = 'Please provide a name';
-    } 
+        spiritName.innerHTML = inputName ? getSpiritName(inputName) : 'Please provide a name';
+    }
 }
 
 function onSelectChange(){ 
