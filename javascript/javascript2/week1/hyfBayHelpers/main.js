@@ -6,7 +6,7 @@ console.log(products);
 const ul = document.querySelector('ul');
 
 function renderProducts(availableProducts) {
-  for(let i = 0; i < products.length ; i++){
+  availableProducts.foreach(product=>{
     const li = document.createElement('li');
     const renderProductName = document.createElement('h2');
     const renderProductPrice = document.createElement('p');
@@ -23,6 +23,7 @@ function renderProducts(availableProducts) {
 
     ul.appendChild(li);
   }
+)
   
 }
 
