@@ -58,11 +58,12 @@ userPrice.addEventListener('change', () => {
     const productPrice = parseInt(userPrice.value);
     let tempProducts = filteredNameProducts? filteredNameProducts:products;
     filteredPriceProducts = tempProducts.filter(product => product.price < productPrice);
-    if(productPrice){
+   /*  if(productPrice){
         return renderProducts(filteredPriceProducts);
     }else{
         return renderProducts(tempProducts);
-    }
+    } */
+    return renderProducts(tempProducts.filter(product => product.price < productPrice))
 });
 
 //sort price by cheap or expensive:
@@ -81,7 +82,7 @@ sortPrice.addEventListener('change', () => {
     return renderProducts(sortedPrice);
 });
 
-//sort the names by ascending or descending order:
+//sort the names by descending order:
 sortName.addEventListener('change', () => {
     const value = sortName.value;
    if(value === 'desc'){
@@ -95,26 +96,29 @@ sortName.addEventListener('change', () => {
         if (firstProductName < secondProductName) {
             return 1;
         }
-        return 0;
-            
+        return 0;    
         }));
     }
-    else if(value === 'asc'){
-        renderProducts(products.sort((firstProduct, secondProduct) => {
-            let firstProductName = firstProduct.name.toLowerCase(),
-            secondProductName = secondProduct.name.toLowerCase();
-    
-        if (firstProductName < secondProductName) {
-            return -1;
-        }
-        if (firstProductName > secondProductName) {
-            return 1;
-        }
-        return 0;
-            
-        }));
+   
+});
+//sort the names by ascending order:
+sortName.addEventListener('change', () => {
+    const value = sortName.value;
+if(value === 'asc'){
+    renderProducts(products.sort((firstProduct, secondProduct) => {
+        let firstProductName = firstProduct.name.toLowerCase(),
+        secondProductName = secondProduct.name.toLowerCase();
 
+    if (firstProductName < secondProductName) {
+        return -1;
     }
+    if (firstProductName > secondProductName) {
+        return 1;
+    }
+    return 0;
+        
+    }));
+}
 });
 
 //sort the list according to their rating and the user input name(if user provided a name):
@@ -127,9 +131,10 @@ sortRating.addEventListener('change', () => {
     } 
     if(value === 'low'){
         sortedRating = tempProducts.sort((a,b) => a.rating - b.rating);
-    }else if(value === 'high'){
-        sortedRating = tempProducts.sort((a,b) => b.rating - a.rating);
     }
+    //else if(value === 'high'){
+     //   sortedRating = tempProducts.sort((a,b) => b.rating - a.rating);
+    //}
     return renderProducts(sortedRating);
 });
 
