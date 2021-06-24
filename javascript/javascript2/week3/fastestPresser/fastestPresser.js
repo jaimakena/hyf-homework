@@ -10,7 +10,7 @@ function inputValue() {
 }
 const timer = () => {
     if(!input.value){
-        console.log('Please provide time in seconds');
+        document.getElementById('alert').innerHTML = `Please provide time in seconds`;
     }else{ 
     window.addEventListener('keypress', keyEvent);
     setTimeout(() => {
@@ -18,11 +18,11 @@ const timer = () => {
         lkey.innerHTML = `L: ${lKeyCount}`;
         skey.innerHTML = `S: ${sKeyCount}`;
         if (sKeyCount > lKeyCount) {
-            console.log(`Person with 's' key wins the game`);
+        document.getElementById('result').innerHTML = `Person with 's' key wins the game`;
         } else if (lKeyCount > sKeyCount) {
-            console.log(`Person with 'l' key wins the game`);
+        document.getElementById('result').innerHTML = `Person with 'l' key wins the game`;
         } else if (lKeyCount = sKeyCount) {
-            console.log(`Its a draw`);
+        document.getElementById('result').innerHTML = `Its a draw`;
         }
         alert('Time is up');
     }, input.value * 1000);
