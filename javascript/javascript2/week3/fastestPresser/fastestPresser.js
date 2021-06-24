@@ -38,3 +38,7 @@ const keyEvent = (event) => {
          lKeyCount++;
     }
 };
+
+document.getElementById('reset').addEventListener('click', () =>{
+    location.reload();
+});
