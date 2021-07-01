@@ -23,11 +23,7 @@ async function translateOneByOne(){
 translateOneByOne();
 
 async function translateAllAtOnce(){
-  const response = Promise.all(
-        [moveBox('red')],
-        [moveBox('blue')],
-        [moveBox('green')]
-        )
+  const response = Promise.all([moveBox('red'), moveBox('blue'), moveBox('green')])
   await response;
   console.log(`All the boxes have been moved`);
 }
