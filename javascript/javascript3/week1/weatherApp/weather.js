@@ -10,14 +10,15 @@ let city = input.value;
     {
     alert(`Please provide a city name`);
     }
-    else{
+    else{  
    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=110d07eec1d93474e56ec4709a2eeb6f`)
     .then((res) => res.json())
-    .then((data) => {
-        console.log(data);
+    .then((data) => { 
+        getWeatherFromLocalStorage(data.name);
         displayWeather(data);
     })   
     }
+    
 }
 
 function displayWeather(data){
@@ -64,15 +65,14 @@ function getCoordinates(position) {
 locationButton.addEventListener('click', currenPosition);
 
 //Using the local storage- saving the city to local storage and show weather
-function getWeatherFromLocalStorage(){
+function getWeatherFromLocalStorage(city){
     window.localStorage;
-    localStorage.setItem('city', 'copenhagen');
-    const cityFromLocalStorage = localStorage.getItem('city');
+    localStorage.setItem('city', city);
+    const cityFromLocalStorage = localStorage.getItem('city'); 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityFromLocalStorage}&units=metric&appid=110d07eec1d93474e56ec4709a2eeb6f`)
         .then((res) => res.json())
         .then((data) => {
-        console.log(data);
         displayWeather(data);
-    })      
+    }) 
 } 
-getWeatherFromLocalStorage();
+
