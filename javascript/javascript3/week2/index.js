@@ -1,19 +1,5 @@
 //Movies exercise
-/* fetch(`https://gist.githubusercontent.com/pankaj28843/08f397fcea7c760a99206bcb0ae8d0a4/raw/02d8bc9ec9a73e463b13c44df77a87255def5ab9/movies.json`)
-.then((res) => res.json())
-.then((data) => {
-    //console.log(data);
-    data.forEach(movie => {
-        console.log(movie);
-        const badMovies = [];
-        if(movie.rating < 5 && movie.year >= 2000){
-            badMovies.push(movie)
-            badMovies.forEach(badMovie =>{
-                console.log(`Title: ${badMovie.title}, Rating: ${badMovie.rating}, Year: ${badMovie.year}`);
-            })   
-        }
-    });
-}) */
+
 const body = document.querySelector('body');
 async function getBadMovies(){
     const response = await fetch(`https://gist.githubusercontent.com/pankaj28843/08f397fcea7c760a99206bcb0ae8d0a4/raw/02d8bc9ec9a73e463b13c44df77a87255def5ab9/movies.json`);
@@ -82,13 +68,6 @@ function geoLocation(){
     })
     return geoLocationPromise;   
 }
-/*   geoLocation()
-  .then((position) => {
-      console.log(position);
-  })
-  .catch((error) => {
-      console.log(error);
-  }) */
 
 async function getCurrentLocation(){
    try {
