@@ -70,7 +70,8 @@ class Product {
   
               ul.appendChild(li);
           })
-       
+          this.getUser();
+          this.getTotal();
   
       }
     
@@ -84,8 +85,7 @@ class Product {
           username.innerHTML = `User name: ${data.username}`;
           document.body.appendChild(username);
         })
-        this.renderProducts();
-        this.getTotal();
+        
       }
   
     }
@@ -99,7 +99,7 @@ class Product {
     shoppingCart.addProduct(audiosystem);
     shoppingCart.addProduct(laptop);
     shoppingCart.searchProduct('Samsung speakers');
-    shoppingCart.getUser();
+    shoppingCart.renderProducts();
   
   const plant = new Product("plant", 10); 
   plant.convertToCurrency('DKK');
