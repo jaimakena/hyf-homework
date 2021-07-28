@@ -10,13 +10,10 @@ async function getRepo(repo){
     const h2 = document.createElement('h2');
     h2.innerHTML = `${repo} Repository  `;
     body.appendChild(h2);
-    const ul = document.createElement('ul');
-    h2.appendChild(ul);
+    const repositoryList = document.createElement('ul');
+    h2.appendChild(repositoryList);
     data.items.map((item) => {
-       /*  console.log(`Name: ${item.name}`);
-        console.log(`URL: ${item.html_url}`);
-        console.log(`Owner: ${item.owner.login}`); */
-    const li = document.createElement('li');
+    const repositoryItem = document.createElement('li');
     const div = document.createElement('div');
 
     const name = document.createElement('p');
@@ -31,8 +28,8 @@ async function getRepo(repo){
     url.innerHTML = `Url: ${item.html_url}`;
     div.appendChild(url);
     
-    li.appendChild(div);
-    ul.appendChild(li);
+    repositoryItem.appendChild(div);
+    repositoryList.appendChild(repositoryItem);
 })
 }
 
