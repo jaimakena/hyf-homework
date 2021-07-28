@@ -1,17 +1,4 @@
 // Paint a circle to a canvas element
-/* function drawCircle(){
-    const canvas = document.getElementById('myCanvas');
-    if(canvas.getContext){
-        const ctx = canvas.getContext('2d');
-        ctx.beginPath();
-        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-        ctx.stroke();
-        ctx.fillStyle = "blue";
-        ctx.fill(); 
-        
-    }   
-}
-drawCircle(); */
 
 //Class creation time!
 
@@ -55,8 +42,6 @@ const maxCircles = 5;
 function drawRandomCircle(xPosition, yPosition){
     canv.width = window.innerWidth;
     canv.height = window.innerHeight; 
-    /* canv.width = 1000;
-    canv.height = 1000; */
     const x = (xPosition)?xPosition:Math.floor(Math.random() * window.screen.width);
     const y = (yPosition)?yPosition:Math.floor(Math.random() * window.screen.height);
     const r = Math.floor(Math.random() * 100);
