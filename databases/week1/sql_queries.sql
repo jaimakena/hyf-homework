@@ -14,7 +14,7 @@ WHERE
 
 --Find all the tasks that are marked as done
 SELECT
-  *
+  task.title, status.name
 FROM
   task
   JOIN status ON task.status_id = status.id
@@ -23,7 +23,7 @@ WHERE
 
 --Find all the tasks that are not marked as done
 SELECT
-  *
+  task.title, status.name
 FROM
   task
   JOIN status ON task.status_id = status.id
@@ -32,7 +32,7 @@ WHERE
 
 --Get all the tasks, sorted with the most recently created first
 SELECT
-  *
+  title, created
 FROM
   task
 ORDER BY
@@ -40,7 +40,7 @@ ORDER BY
 
 --Get the single most recently created task
 SELECT
-  *
+  title, created
 FROM
   task
 ORDER BY
