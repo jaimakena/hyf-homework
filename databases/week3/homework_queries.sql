@@ -7,12 +7,7 @@ VALUES(5, 'Bread', 'Garlic Bread', 'Amager', '2021-08-05 12:00:00', 6, 60.30, '2
 --Get a meal with any id, fx 1
 SELECT * FROM meal WHERE id = 3;
 --Update a meal with any id, fx 1. Update any attribute fx the title or multiple attributes
-UPDATE meal
-SET title = 'Waffles', location = 'Vesterbro'
-WHERE id = 5;
-UPDATE meal
-SET description = 'Nutella & Banana'
-WHERE id = 5;
+UPDATE meal SET title = 'Waffles', description = 'Nutella & Banana', location = 'Vesterbro' WHERE id = 5;
 
 --Delete a meal with any id, fx 1
 DELETE FROM meal WHERE id = 5;
@@ -68,8 +63,8 @@ VALUES(5, 'Average', 'Food tastes ok', 4, 3, '2021-07-01 09:00:00'),
 SELECT title, price  FROM meal WHERE price < 120;
 
 --Get meals that still has available reservations
-SELECT title, max_reservations, number_of_guests FROM meal JOIN reservation ON meal.id = reservation.meal_id 
-WHERE number_of_guests < max_reservations;
+SELECT meal.title, meal.max_reservations, reservation.number_of_guests FROM meal JOIN reservation ON meal.id = reservation.meal_id 
+WHERE reservation.number_of_guests < meal.max_reservations;
 
 --Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
 SELECT * FROM meal WHERE title LIKE '%brød%';
@@ -82,8 +77,11 @@ WHERE created_date BETWEEN '2021-06-01 09:00:00' AND '2021-08-01 09:00:00';
 SELECT * FROM meal LIMIT 4;
 
 --Get the meals that have good reviews
-SELECT meal.title AS meal_name, review.title AS review, review.description, review.stars FROM meal JOIN review ON meal.id = review.meal_id
-WHERE stars > 3;
+SELECT meal.title AS meal_name, review.title AS review, review.description, review.stars 
+FROM meal 
+JOIN review
+ON meal.id = review.meal_id
+WHERE review.stars > 3;
 
 --Get reservations for a specific meal sorted by created_date
 SELECT meal.title, meal.created_date, reservation.contact_name FROM meal JOIN reservation ON meal.id = reservation.meal_id WHERE meal.id = 2
