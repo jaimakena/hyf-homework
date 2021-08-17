@@ -17,6 +17,6 @@ class Circle{
 const circle1 = new Circle(10);
 const circle2 = new Circle(5);
 const circle3 = new Circle(8);
-console.log(circle1.getDiameter());
-console.log(circle2.getCircumference());
-console.log(circle3.getArea());
+console.log(`Circle1- Diameter: ${circle1.getDiameter()}, Circumference: ${circle1.getCircumference()}, Area: ${circle1.getArea()}`);
+console.log(`Circle2- Diameter: ${circle2.getDiameter()}, Circumference: ${circle2.getCircumference()}, Area: ${circle2.getArea()}`);
+console.log(`Circle3- Diameter: ${circle3.getDiameter()}, Circumference: ${circle3.getCircumference()}, Area: ${circle3.getArea()}`);
