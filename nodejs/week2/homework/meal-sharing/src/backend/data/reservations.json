@@ -1,0 +1,29 @@
+
+[
+    {
+      "id": 1,
+      "name": "Benjamin Hughes",
+      "email": "benjamin@hughes.dk",
+      "mealId": 1
+    },
+    {
+      "id": 2,
+      "name": "Donald Trump",
+      "email": "donald@trump.dk",
+      "mealId": 2
+    },
+    {
+      "id": 3,
+      "name": "Susan Connor",
+      "email": "susan@connor.dk",
+      "mealId": 3
+    },
+    {
+      "id": 4,
+      "name": "Emily Parker",
+      "email": "emily@parker.dk",
+      "mealId": 4 
+    }
+  
+]
+  
