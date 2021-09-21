@@ -1,0 +1,40 @@
+* {
+    text-align: center;
+}
+h1{
+    font-style: italic;
+}
+input {
+    padding : 5px;
+}
+button {
+    padding : 5px;
+    margin-bottom : 10px;
+    background-color: rgb(116, 197, 224);
+}
+#skey {
+    float : left;
+    margin-left : 40em;
+    padding: 10px;
+}
+#lkey {
+    float : right;
+    margin-right : 40em;
+    padding: 10px;
+}
+.Line1 {
+    position : absolute;
+    left : 50%;
+    height : 50%;
+    width : 1px;
+    background : black;
+}
+hr{
+    margin-left: 35em;
+    margin-right: 35em;
+}
+
+#result{
+    margin-top: 22rem;
+    margin-right: 1em;
+}
