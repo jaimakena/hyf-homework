@@ -1,26 +1,17 @@
 import React, { useState } from 'react';
 
-function ToDo(props){
+function ToDo({id, description, handleDelete}){
     const [enabled, setEnabled] = useState(false);
-    const handleChange = (id) => {
-        setEnabled(prevState => !prevState);
-        const style=enabled?'none':'line-through';
-        const labelElement=document.getElementById('label'+id);
-        if(labelElement){
-            labelElement.style.textDecorationLine=style;
-        }
-      }
-
     return(
       <div>
-        <li><label id={"label" + props.id} style={{ textDecorationLine: 'none' }}>
-            {props.description}
+        <li><label style={{ textDecorationLine: enabled ? 'line-through' : 'none'  }}>
+            {description}
         </label>
         <input
             type="checkbox"
             checked={enabled}
-            onChange={() => handleChange(props.id)} />
-        <button onClick={() => props.handleDelete(props.id)}>
+            onChange={() => setEnabled(prevState => !prevState)} />
+        <button onClick={() => handleDelete(id)}>
           Delete
         </button>
         </li>
