@@ -1,0 +1,17 @@
+
+[
+    {
+        "name": "cat",
+        "color": ["white","red","blue", "brown"],
+        "breed": ["American Shorthair","Abyssinian","Birman","American CurlCat"],
+        "size" : ["small", "medium"],
+        "gender": ["male", "female"]
+    },
+    {
+        "name": "dog",
+        "color": ["white","red", "brown", "grey"],
+        "breed": ["German Sheperd","Bull Dog","Labrador", "Pomeranian"],
+        "size" : ["small", "medium", "large"],
+        "gender": ["male", "female"]
+    }
+    ]
